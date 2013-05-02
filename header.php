@@ -15,16 +15,25 @@
 <body <?php body_class(); ?>>
 	<div id="page">
 		<header>
-			<hgroup>
-				<h1 class="site-title">
-					<a href="<?=esc_url( home_url( '/' ) ); ?>" title="<?=esc_attr( get_bloginfo( 'name' , 'display' ) ); ?>" rel="home">
-						<?php bloginfo( 'name' ); ?>
-					</a>
-				</h1>
-
-				<nav id="site-navigation">
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
-				</nav>
-			</hgroup>
+            <div class="container-fluid">
+                <hgroup>
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <h1 class="site-title">
+                                <a href="<?=esc_url( home_url( '/' ) ); ?>" title="<?=esc_attr( get_bloginfo( 'name' , 'display' ) ); ?>" rel="home">
+                                    <?php bloginfo( 'name' ); ?>
+                                </a>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <nav id="site-navigation">
+                                <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+                            </nav>
+                        </div>
+                    </div>
+                </hgroup>
+            </div>
 		</header>
-        <div id="main">
+        <div id="content">
