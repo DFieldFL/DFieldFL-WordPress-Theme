@@ -28,12 +28,23 @@
                     </div>
                     <div class="row-fluid">
                         <div class="span12">
-                            <nav id="site-navigation">
-                                <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
-                            </nav>
                         </div>
                     </div>
                 </hgroup>
+            </div>
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <nav id="site-navigation">
+                            <?php wp_nav_menu(array(
+                                'theme_location' => 'top-bar',
+                                'depth' => 2,
+                                'container' => false,
+                                'menu_class' => 'nav',
+                                'walker' => new Bootstrap_Walker_Nav_Menu()));?>
+                        </nav>
+                    </div>
+                </div>
             </div>
 		</header>
         <div id="content">

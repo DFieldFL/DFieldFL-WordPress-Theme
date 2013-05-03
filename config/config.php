@@ -12,3 +12,4 @@ define('THEME_BOOTSTRAP_URL', THEME_STATIC_URL . '/bootstrap/bootstrap');
 define('THEME_BOOTSTRAP_CSS_URL', THEME_BOOTSTRAP_URL . '/css');
 define('THEME_BOOTSTRAP_JS_URL', THEME_BOOTSTRAP_URL . '/js');
 define('THEME_BOOTSTRAP_IMG_URL', THEME_BOOTSTRAP_URL . '/img');
+register_nav_menu('top-bar', __('Primary Menu'));
