@@ -115,3 +115,11 @@ function include_styles() {
     wp_enqueue_style('bootstrap-responsive', THEME_BOOTSTRAP_CSS_URL . '/bootstrap-responsive.min.css', array( 'bootstrap-css' ), null, 'all');
 }
 add_action('wp_enqueue_scripts', 'include_styles');
+
+/**
+ * Registers the nav menus
+ */
+function register_theme_nav_menus() {
+    register_nav_menu('top-bar', __('Primary Menu'));
+}
+add_action('init', 'register_theme_nav_menus');

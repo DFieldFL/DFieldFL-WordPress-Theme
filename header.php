@@ -17,18 +17,24 @@
 		<header>
             <div class="container-fluid">
                 <hgroup>
-                    <div class="row-fluid">
-                        <div class="span12">
-                            <h1 class="site-title">
-                                <a href="<?=esc_url( home_url( '/' ) ); ?>" title="<?=esc_attr( get_bloginfo( 'name' , 'display' ) ); ?>" rel="home">
-                                    <?php bloginfo( 'name' ); ?>
-                                </a>
-                            </h1>
+                    <div id="header">
+                        <div class="row-fluid">
+                            <div class="span12">
+                                <h1 class="site-title">
+                                    <a href="<?=esc_url( home_url( '/' ) ); ?>" title="<?=esc_attr( get_bloginfo( 'name' , 'display' ) ); ?>" rel="home">
+                                        <?php bloginfo( 'name' ); ?>
+                                    </a>
+                                </h1>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row-fluid">
-                        <div class="span12">
+                    <?php $header_image = get_header_image();
+                    if ( ! empty( $header_image ) ) : ?>
+                        <div class="row-fluid">
+                            <div class="span12">
+                                <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
+                            </div>
                         </div>
+                    <?php endif; ?>
                     </div>
                 </hgroup>
             </div>
