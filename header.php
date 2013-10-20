@@ -19,18 +19,19 @@
                 <hgroup>
                     <div id="header">
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-sm-12">
                                 <h1 class="site-title">
                                     <a href="<?=esc_url( home_url( '/' ) ); ?>" title="<?=esc_attr( get_bloginfo( 'name' , 'display' ) ); ?>" rel="home">
                                         <?php bloginfo( 'name' ); ?>
                                     </a>
                                 </h1>
+                                <p id="blog-description"><?php bloginfo( 'description' ); ?></p>
                             </div>
                         </div>
                     <?php $header_image = get_header_image(); ?>
                     <?php if ( ! empty( $header_image ) ) : ?>
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-sm-12">
                                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
                             </div>
                         </div>
@@ -47,7 +48,8 @@
                                 'depth' => 2,
                                 'container' => false,
                                 'menu_class' => 'nav navbar-nav',
-                                'walker' => new Bootstrap_Walker_Nav_Menu()));?>
+                                'walker' => new Bootstrap_Walker_Nav_Menu(),
+                                'link_after' => '.'));?>
                         </nav>
                     </div>
                 </div>

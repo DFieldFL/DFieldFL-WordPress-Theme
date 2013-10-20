@@ -11,7 +11,7 @@
 
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-sm-12">
                                 <div class="post-title"><a href="<?php the_permalink(); ?>"><?=get_the_title(); ?></a></div>
                                 <div class="post-content"><?php the_content(); ?></div>
                             </div>

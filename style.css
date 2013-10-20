@@ -6,15 +6,34 @@ Author URI: http://www.GroTechSolutions.com
 Description: 2013 responsive DFieldFL main theme.
 Version: 0.0.1
 */
-#page {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 #header {
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+#blog-description {
+    font-style: italic;
+    color: #a7aab1;
+}
+
+.navbar-nav > li > a {
+    float: left;
+    color: #22272A;
+}
+
+#site-navigation > .nav > li > a:hover {
+    color: #a7aab1;
+    background-color: #fff;
+}
+
+.nav > li.active > a {
+    color: #7bc673;
+}
+
+.link-separator {
+    margin: 15px 10px;
+    float: right;
+    color: #D0D0DA;
 }
 
 .post {
@@ -27,6 +46,21 @@ Version: 0.0.1
 
 .post-odd {
     background-color: #FFF;
+}
+
+.post-title > a {
+    font-size: 40px;
+    color: #22272A;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.post-title > a:hover {
+    color: #7bc673;
+    text-decoration: none;
 }
 
 footer {
